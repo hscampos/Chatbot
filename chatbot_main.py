@@ -16,7 +16,7 @@ if 'conversa' not in st.session_state:
 pergunta = st.text_input("O que deseja perguntar ?")
 botaoEnviar = st.button("Perguntar")
 
-# Consulta a OpenAI e trata o retorno da resposta para o usuário.
+# Consulta a OpenAI e trata o retorno.
 
 if botaoEnviar:
     st.session_state.conversa.append({"role": "user", "content": pergunta})
@@ -28,7 +28,7 @@ if botaoEnviar:
         {"role": "assistant",
          "content": retornoOpenAi['choices'][0]['message']['content']})
 
-# Realiza o tratamento da conversa.
+# Realiza o construção da conversa com o retorno já tratado e a pergunta feita.
 
 if len(st.session_state.conversa) > 0:
     for i in range(len(st.session_state.conversa)):
