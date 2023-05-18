@@ -6,6 +6,6 @@ Deixo aqui também o link direto para a página de API keys: https://platform.op
 
 Para iniciar essa aplicação, será necessário utilizar os seguintes comandos:
 
-    1. $ pip install -r requirements.txt
-    2. $ Script\activate
+    1. $ Script\activate
+    2. $ pip install -r requirements.txt
     3. $ streamlit run chatbot_main.py
